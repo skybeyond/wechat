@@ -1,6 +1,7 @@
 <!--index.wxml-->
 <view class="container">
-  <view class="swiper_box">
+
+  <view class="swiper_box" hover-class="none">
     <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" indicator-color="#fff" bindtap="handleTap">
       <block wx:for="{{images}}" wx:key="headimg">
         <swiper-item>
@@ -11,17 +12,40 @@
   </view>
 
 
-  <view class="venues_box">
-        <view class="venues_list">
+  <view class="venues_box" hover-class="none">
+        <view class="venues_list" hover-class="none">
             <block wx:for="{{images}}" wx:key="id">
-                <view class="venues_item">
-                    <navigator url="../brand/index?id={{item.id}}">
-                        <image src="{{item.logo}}"/>
+                <view class="venues_item" hover-class="none">
+                    <navigator url="../brand/index?id={{item.id}}" hover-class="none">
+                        <image mode="aspectFill" src="{{item.logo}}" />
+                        <text>{{item.name}}</text>
                     </navigator>
                 </view>
             </block>
         </view>
-    </view>
+  </view>
+
+
+  <view class="hot_commodity_separator">
+    <view></view>
+    <text>热门商品</text>
+    <view></view>
+  </view>
+
+
+  <view class="commodity_box">
+    <block wx:for="{{images}}" wx:key="id">
+      <view class="commodity_items">
+        <navigator url="../brand/index?id={{item.id}}" hover-class="none">
+            <image mode="aspectFill" src="{{item.headimg}}"></image>
+            <text>{{item.describes}}</text>
+        </navigator>
+      </view>
+
+    </block>
+
+
+  </view>
 
   <!-- <view class="userinfo">
     <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>

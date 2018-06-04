@@ -10,7 +10,7 @@
 	"compileType": "miniprogram",
 	"libVersion": "1.9.91",
 	"appid": "wx269e6393804f6416",
-	"projectname": "wx",
+	"projectname": "wechat",
 	"isGameTourist": false,
 	"condition": {
 		"search": {

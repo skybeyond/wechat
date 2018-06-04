@@ -36,19 +36,87 @@ swiper{
 swiper-item image{
 	width: 100%;
 }
+
+/*导航栏*/
+.venues_list{
+  display: flex;
+  /* flex-direction: column; */
+  /*换行*/
+  /*flex-wrap: wrap;*/
+  /*justify-content:center;*/
+}
 .venues_box{
 	width: 100%;
-	height: 360rpx;
 }
 .venues_item {
     display: inline-block;
     width: 20%;
-    margin: 0 1%;
+    margin: 20rpx 2%;
 }
 navigator{
+  text-align: center;
 	width: 100%;
 }
-navigator image{
-	width: 100%;
-	height: 180rpx;
-} 
+/* navigator image{
+	width: 100rpx;
+	height: 100rpx;
+  border: 0 solid #fff;
+  border-radius: 50%;
+} */
+.venues_item image{
+  width: 100rpx;
+  height: 100rpx;
+  border: 0 solid #fff;
+  border-radius: 50%;
+}
+text{
+  display: block;
+  font-size: 24rpx;
+}
+
+/*分割线*/
+.hot_commodity_separator{
+  display: flex;
+  margin: 10rpx 0;
+  justify-content:center;
+  align-items:center;
+}
+.hot_commodity_separator text{
+  font-size: 40rpx;
+}
+.hot_commodity_separator view{
+  width: 100rpx;
+  height: 2rpx;
+  background: #000;
+}
+
+
+/*商品*/
+.commodity_box{
+  display: flex;
+  flex-wrap: wrap;
+}
+.commodity_items{
+  width: 50%;
+}
+
+
+.commodity_items image{
+  width: 300rpx;
+  height: 300rpx;
+}
+.commodity_items text{
+    display: -webkit-box;
+    text-align: left;
+    margin: 0 auto;
+    width: 300rpx;
+    font-size: 32rpx;
+    color:#000000;
+    line-height: 40rpx;
+    word-break: break-all;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp:2;
+    overflow: hidden;
+    text-overflow:ellipsis;
+}
+
